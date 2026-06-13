@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tree Health Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="overlay">
+
+        <div class="card">
+
+            <h1>🌳 Smart Tree Health Analyzer</h1>
+
+            <p class="subtitle">
+                Upload a tree image and get an AI-powered health assessment
+            </p>
+
+            <form method="POST" enctype="multipart/form-data">
+
+                <label for="image" class="upload-box" id="upload-box">
+                    📷 Upload Tree Image
+                </label>
+
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/*"
+                    onchange="fileSelected()"
+                    required>
+
+                <p id="ready-msg"></p>
+
+                <button type="submit" class="analyze-btn">
+                    Analyze Tree
+                </button>
+
+            </form>
+
+            {% if result %}
+
+            <div class="result-box">
+
+                <h2>Result</h2>
+
+                <div class="result">
+                    {{ result }}
+                </div>
+
+                <a href="/suggestions">
+                    <button type="button" class="suggestion-btn">
+                        🌿 View Suggestions
+                    </button>
+                </a>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <script>
+        function fileSelected() {
+
+            const uploadBox =
+                document.getElementById("upload-box");
+
+            const readyMsg =
+                document.getElementById("ready-msg");
+
+            uploadBox.classList.add("ready");
+
+            readyMsg.innerHTML =
+                "✅ Ready to Analyze";
+        }
+    </script>
+
+</body>
+</html>

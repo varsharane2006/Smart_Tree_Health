@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e")
+    center center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,0.45);
+    padding:20px;
+}
+
+.card{
+
+    width:100%;
+    max-width:650px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 8px 30px rgba(0,0,0,0.3);
+}
+
+h1{
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+.subtitle{
+    margin-bottom:30px;
+    color:#f1f1f1;
+}
+
+.upload-box{
+
+    display:block;
+
+    padding:25px;
+
+    border:2px dashed white;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+    transition:0.3s;
+}
+
+.upload-box:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+input[type="file"]{
+    display:none;
+}
+
+.ready{
+    border:2px solid #2ecc71 !important;
+    background:rgba(46,204,113,0.25);
+    box-shadow:0 0 20px rgba(46,204,113,0.5);
+}
+
+#ready-msg{
+    color:#90ee90;
+    font-weight:600;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.analyze-btn,
+.suggestion-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-top:15px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.analyze-btn{
+    background:#2ecc71;
+    color:white;
+}
+
+.analyze-btn:hover{
+    transform:scale(1.03);
+}
+
+.suggestion-btn{
+    background:#3498db;
+    color:white;
+}
+
+.suggestion-btn:hover{
+    transform:scale(1.03);
+}
+
+.result-box{
+    margin-top:25px;
+}
+
+.result{
+
+    font-size:24px;
+    font-weight:bold;
+
+    margin-top:10px;
+
+    color:#ffffff;
+}
+
+.suggestion-content{
+
+    margin:25px 0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    background:rgba(255,255,255,0.15);
+
+    padding:20px;
+
+    border-radius:15px;
+}
